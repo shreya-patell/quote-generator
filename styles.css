@@ -1,52 +1,56 @@
-* {
+/* Body Styling */
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f4f4f4; /* Light neutral background */
+  color: #333; /* Dark text color for readability */
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
-}
-
-body {
-  font-family: 'Roboto', sans-serif;
-  background: linear-gradient(135deg, #fbc2eb, #a6c1ee);
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100vh;
+  box-sizing: border-box;
 }
 
+/* Container Styling */
 .container {
-  text-align: center;
+  background-color: #ffffff; /* White background for the quote container */
+  border-radius: 10px;
   padding: 20px;
-  background-color: rgba(255, 255, 255, 0.8);
-  border-radius: 15px;
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for a modern look */
+  width: 80%;
+  max-width: 600px;
+  text-align: center;
 }
 
-.quote-box {
-  margin-bottom: 20px;
-}
-
-.quote-text {
-  font-family: 'Poppins', sans-serif;
-  font-size: 1.5rem;
-  font-weight: 600;
+/* Title Styling */
+h1 {
+  font-size: 36px;
   color: #333;
   margin-bottom: 20px;
-  line-height: 1.6;
-  max-width: 80%;
-  margin: 0 auto;
 }
 
-.generate-btn {
-  background-color: #ff6ec7;
-  color: white;
-  font-size: 1.1rem;
-  padding: 10px 20px;
+/* Quote Text Styling */
+#quote-text {
+  font-size: 24px;
+  color: #555; /* Lighter text for the quote */
+  font-style: italic;
+  margin-bottom: 20px;
+  line-height: 1.5;
+}
+
+/* Button Styling */
+#generate-btn {
+  font-size: 18px;
+  color: #fff;
+  background-color: #4CAF50; /* Green color for a neutral yet fresh look */
   border: none;
+  padding: 10px 20px;
   border-radius: 5px;
   cursor: pointer;
-  transition: background-color 0.3s ease;
+  transition: background-color 0.3s;
 }
 
-.generate-btn:hover {
-  background-color: #ff4081;
+#generate-btn:hover {
+  background-color: #45a049; /* Darker green on hover */
 }
