@@ -1,19 +1,20 @@
 const generateButton = document.getElementById("generate-btn");
 const quoteText = document.getElementById("quote-text");
 
-// Function to fetch a random quote from the API
 async function fetchRandomQuote() {
   try {
-    const response = await fetch('https://api.quotable.io/random');
+    const response = await fetch('https://zenquotes.io/api/random');
+    if (!response.ok) {
+      throw new Error('Failed to fetch quote');
+    }
     const data = await response.json();
-    return `"${data.content}" - ${data.author}`;
+    return `"${data[0].q}" - ${data[0].a}`;
   } catch (error) {
     console.error('Error fetching the quote:', error);
-    return "Something went wrong. Please try again.";
+    return "The quote couldn't load. Please try again.";
   }
 }
 
-// Function to update the quote on the page
 async function updateQuote() {
   const quote = await fetchRandomQuote();
   quoteText.textContent = quote;
@@ -21,5 +22,4 @@ async function updateQuote() {
 
 generateButton.addEventListener("click", updateQuote);
 
-// Load a quote on page load
 window.onload = updateQuote;
