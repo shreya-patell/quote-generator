@@ -1,8 +1,8 @@
 /* Body Styling */
 body {
-  font-family: 'Arial', sans-serif;
-  background-color: #f4f4f4; /* Light neutral background */
-  color: #333; /* Dark text color for readability */
+  font-family: 'Poppins', sans-serif;
+  background-color: #FFFBF2; /* Soft pastel background */
+  color: #333; /* Dark text for readability */
   margin: 0;
   padding: 0;
   display: flex;
@@ -15,42 +15,65 @@ body {
 /* Container Styling */
 .container {
   background-color: #ffffff; /* White background for the quote container */
-  border-radius: 10px;
-  padding: 20px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for a modern look */
+  border-radius: 20px; /* Rounded corners for a soft, friendly look */
+  padding: 30px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
   width: 80%;
-  max-width: 600px;
+  max-width: 500px;
   text-align: center;
+  border: 1px solid #F2C8D5; /* Soft border color */
 }
 
 /* Title Styling */
 h1 {
-  font-size: 36px;
-  color: #333;
-  margin-bottom: 20px;
+  font-size: 40px;
+  color: #FF69B4; /* Bold pink for the title */
+  margin-bottom: 25px;
+  font-family: 'Lobster', cursive; /* Fun, playful font */
 }
 
 /* Quote Text Styling */
 #quote-text {
-  font-size: 24px;
+  font-size: 26px;
   color: #555; /* Lighter text for the quote */
   font-style: italic;
-  margin-bottom: 20px;
+  margin-bottom: 25px;
   line-height: 1.5;
+  font-family: 'Roboto', sans-serif; /* Clean, modern font */
+  letter-spacing: 0.5px;
 }
 
 /* Button Styling */
 #generate-btn {
-  font-size: 18px;
+  font-size: 20px;
   color: #fff;
-  background-color: #4CAF50; /* Green color for a neutral yet fresh look */
+  background-color: #FFD700; /* Yellow for a cheerful look */
   border: none;
-  padding: 10px 20px;
-  border-radius: 5px;
+  padding: 12px 30px;
+  border-radius: 30px; /* Cute rounded button */
   cursor: pointer;
-  transition: background-color 0.3s;
+  transition: background-color 0.3s, transform 0.2s;
 }
 
 #generate-btn:hover {
-  background-color: #45a049; /* Darker green on hover */
+  background-color: #FFBF00; /* Slightly darker yellow for hover effect */
+  transform: scale(1.1); /* Slight zoom effect on hover */
+}
+
+#generate-btn:focus {
+  outline: none; /* Removes the default focus outline */
+}
+
+/* Animation for the quote text */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+#quote-text {
+  animation: fadeIn 1s ease-in-out;
 }
