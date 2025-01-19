@@ -1,9 +1,13 @@
 const generateButton = document.getElementById("generate-btn");
 const quoteText = document.getElementById("quote-text");
 
+// Function to fetch a random quote from ZenQuotes API using a CORS proxy
 async function fetchRandomQuote() {
+  const proxyUrl = 'https://cors-anywhere.herokuapp.com/';
+  const apiUrl = 'https://zenquotes.io/api/random';
+
   try {
-    const response = await fetch('https://zenquotes.io/api/random');
+    const response = await fetch(proxyUrl + apiUrl);
     if (!response.ok) {
       throw new Error('Failed to fetch quote');
     }
@@ -15,6 +19,7 @@ async function fetchRandomQuote() {
   }
 }
 
+// Function to update the quote on the page
 async function updateQuote() {
   const quote = await fetchRandomQuote();
   quoteText.textContent = quote;
@@ -22,4 +27,5 @@ async function updateQuote() {
 
 generateButton.addEventListener("click", updateQuote);
 
+// Load a quote on page load
 window.onload = updateQuote;
